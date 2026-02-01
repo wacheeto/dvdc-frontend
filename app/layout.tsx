@@ -1,6 +1,6 @@
 import "./globals.css";
 import Navbar from "./components/Navbar";
-
+import Footer from "./components/Footer";
 import { DM_Sans, Playfair_Display } from "next/font/google";
 
 export const dmSans = DM_Sans({
@@ -25,11 +25,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`min-h-screen bg-white flex font-sans flex-col items-center text-black ${dmSans.variable} ${playfair.variable}`}>
-        <Navbar />
-
-        <main className="flex-1 container ">
+        <div className="w-full sticky top-0 z-50">
+          <Navbar />
+        </div>
+        <main className="flex-1 container  ">
           {children}
         </main>
+        <Footer/>
       </body>
     </html>
   );
