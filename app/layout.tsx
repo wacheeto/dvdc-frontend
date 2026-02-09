@@ -25,10 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`min-h-screen bg-white flex font-sans flex-col items-center text-black ${dmSans.variable} ${playfair.variable}`}>
-        <div className="w-full sticky top-0 z-50">
+        <div className="w-full sticky top-0 z-100">
           <Navbar />
         </div>
-        <main className="flex-1 container  ">
+        <main className="flex-1 container  bg-white">
           {children}
         </main>
         <Footer/>

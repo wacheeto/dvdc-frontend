@@ -2,7 +2,9 @@
 import { DM_Sans, Playfair_Display } from "next/font/google";
 import Image from "next/image";
 import { ArrowRight,Droplets,Leaf,Quote,Shield,ShieldCheck, Star, Stethoscope, Users, Wifi } from "lucide-react";
-import { Google } from "@mui/icons-material";
+import { Google, Info, Phone, PinDrop } from "@mui/icons-material";
+import maps from './assets/maps.webp';
+
 export const dmSans = DM_Sans({
   subsets: ['latin'],
   variable: '--font-dm-sans',
@@ -25,41 +27,45 @@ export default function Home() {
           <div className=" flex  flex-col items-center md:items-start">
             <h1 className={`text-4xl lg:text-6xl lg:text-start font-bold text-center ${playfair.className} `}>Caring for Your Smile, <br /> Every Step of the Way</h1>
             <p className={` md:text-lg lg:text-start my-4 text-center  ${dmSans.className}`}>Book your appointment today and  experience <br /> dental care designed around you.</p>
-            <button className={`btn py-5 w-36 bg-transparent text-black  rounded-full shadow-none ${dmSans.className} hover:bg-zinc-900 hover:text-white`}>Book now!</button>
+            <div className="flex flex-row gap-2">
+              <button className={`btn py-5 w-36  bg-zinc-900 text-white  rounded-full shadow-none ${dmSans.className} hover:bg-zinc-800 hover:text-white`}>Book now!</button>
+              <button className={`btn py-5 w-36  bg-transparent text-black  rounded-full shadow-none ${dmSans.className} hover:bg-zinc-800 hover:text-white`}>Learn more</button>
+            
+            </div>
           </div>
         </div>
         <div
           className="flex-1 flex items-center justify-center absolute inset-0 md:static  text-gray-400 ">
-            <img src="test" alt="test" className="h-full  w-full image-full " />
+            <img src="test" alt="test" className="outline h-screen md:h-[60vh] bg-red-200  w-full" />
         </div>
       </section>
       {/* years of service,
       certifications,
       patients */}
-      <div className="  w-full my-10 p-2 grid grid-cols-2 lg:grid-cols-4  h-fit  ">
-        <div className="border-s-3 border-gray-300 p-2 flex flex-col  justify-center">
-          <h1 className={`text-4xl lg:text-6xl font-bold text-start ${dmSans.className} `}>20+</h1>
+      <div className="  w-full my-10 grid grid-cols-2 lg:grid-cols-4  h-fit  ">
+        <div className="border-s-3 border-gray-300 p-4 flex flex-col  justify-center">
+          <h1 className={`text-4xl p-2 lg:text-6xl font-bold text-start ${dmSans.className} `}>20+</h1>
           <span>Years of service</span>
         </div>
-        <div className="border-s-3 border-gray-300 p-2 flex flex-col  justify-center">
+        <div className="border-s-3  border-gray-300 p-4 flex flex-col  justify-center">
           <h1 className={`text-4xl lg:text-6xl font-bold text-start ${dmSans.className} `}>10k+</h1>
           <span>Patients treated</span>
         </div>
-        <div className="border-s-3 border-gray-300 p-2 flex flex-col  justify-center">
+        <div className="border-s-3 border-gray-300 p-4 flex flex-col  justify-center">
           <h1 className={`text-4xl lg:text-6xl font-bold text-start ${dmSans.className} `}>10k+</h1>
           <span>Patients treated</span>
         </div>
-        <div className="border-s-3 border-gray-300 p-2 flex flex-col  justify-center">
+        <div className="border-s-3 border-gray-300 p-4 flex flex-col  justify-center">
           <h1 className={`text-4xl lg:text-6xl font-bold text-start ${dmSans.className} `}>Modern</h1>
           <span>Dental Care</span>
         </div>
       </div>
       {/* about section */}
       <section
-        className=" bg-white text-black my-8 md:my-20 h-fit flex md:flex-row flex-col w-full gap-2  "
+        className=" bg-white text-black my-8 md:my-35 h-fit flex md:flex-row flex-col w-full gap-2  "
       >
         <div className=" flex flex-1 items-center justify-center   ">
-          <img src="test" alt="test" className="  w-full image-full h-[350px] " />
+          <img src="test" alt="test" className="  w-full h-[350px] md:h-full  outline  " />
         </div>
         <div className={` p-2 flex flex-1 flex-col ${dmSans.className}`}>
           <h1 className={`text-4xl lg:text-6xl lg:text-start font-bold text-center ${playfair.className} `}>High-Quality Dental Services Tailored to Your Needs</h1>
@@ -92,50 +98,76 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="faqs" className=" h-fit flex flex-col p-2 my-8 md:my-20 ">
-        <p className={`text-3xl lg:text-5xl font-bold text-center ${playfair.className} `}>Your Frequently Asked Questions</p>
-        <span className={` md:text-lg my-4 text-center  ${dmSans.className}`}>Book your appointment today and  experience <br /> dental care designed around you.</span>
-        <div className=" flex flex-col justify-center items-center space-y-2 my-8">
-          <div className="collapse  rounded-2xl outline-gray-300 outline w-full md:w-[70%]">
-            <input type="checkbox" />
-            <div className="collapse-title font-semibold">How do I create an account?</div>
-            <div className="collapse-content text-sm">
-              Click the "Sign Up" button in the top right corner and follow the registration process.
-            </div>
+      <section id="location" className="h-fit flex flex-col p-2 my-8 md:my-30 ">
+        <div className="flex flex-col md:flex-row gap-2  ">
+          <div className=" flex-1 flex flex-col my-4 ">
+            <span className={`font-regular text-lg ${dmSans.className}`}>
+              Marikina City, Metro Manila
+            </span>
+            <span className={`font-regular text-5xl md:text-6xl ${playfair.className}`}>
+              Clinic Name
+            </span>
           </div>
-          <div className="collapse  rounded-2xl outline-gray-300 outline w-full md:w-[70%]">
-            <input type="checkbox" />
-            <div className="collapse-title font-semibold">How do I create an account?</div>
-            <div className="collapse-content text-sm">
-              Click the "Sign Up" button in the top right corner and follow the registration process.
-            </div>
-          </div>
-          <div className="collapse  rounded-2xl outline-gray-300 outline w-full md:w-[70%]">
-            <input type="checkbox" />
-            <div className="collapse-title font-semibold">How do I create an account?</div>
-            <div className="collapse-content text-sm">
-              Click the "Sign Up" button in the top right corner and follow the registration process.
-            </div>
-          </div>
-          <div className="collapse  rounded-2xl outline-gray-300 outline w-full md:w-[70%]">
-            <input type="checkbox" />
-            <div className="collapse-title font-semibold">How do I create an account?</div>
-            <div className="collapse-content text-sm">
-              Click the "Sign Up" button in the top right corner and follow the registration process.
-            </div>
-          </div>
-          <div className="collapse  rounded-2xl outline-gray-300 outline w-full md:w-[70%]">
-            <input type="checkbox" />
-            <div className="collapse-title font-semibold">How do I create an account?</div>
-            <div className="collapse-content text-sm">
-              Click the "Sign Up" button in the top right corner and follow the registration process.
-            </div>
+          <div className=" flex-1  items-center flex">
+            <span className={`font-regular text-lg text-justify  ${dmSans.className}`}>
+              Id est consectetur nostrud ipsum dolor Lorem et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ea praesentium, dolorem neque aliquam ipsa, aspernatur nostrum repellendus.
+            </span>
           </div>
         </div>
+        <div className="relative  w-screen h-[250px] md:h-[450px]  self-center my-4 ">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.8932204432267!2d-88.80049402406999!3d41.35467459802385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880955000e076dd7%3A0x8b32e8618294c8e7!2sVolvo%20Island!5e0!3m2!1sen!2sph!4v1770653323577!5m2!1sen!2sph"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+          <div className=" w-full flex space-x-2 ">
+            <PinDrop sx={{fontSize:'24px'}}/>
+            <div className=" space-x-2 text-lg  flex flex-col w-full ">
+              <span className={`font-semibold mb-2 text-xl   ${playfair.className}`}>Address</span>
+              <p className="font-normal">88 Happy Lane, Barangka Drive</p>
+              <p>Marikina City, Metro Manila</p>
+              <p>Philippines</p>
+            </div>
+          </div>
+          <div className=" w-full flex  space-x-2 ">
+            <Phone sx={{fontSize:'24px'}}/>
+            <div className=" space-x-2   flex flex-col w-full ">
+              <span className={`font-semibold mb-2 text-xl   ${playfair.className}`}>Contact Information</span>
+              <div className="w-full flex gap-2 md:justify-between">
+                <p className="font-normal">Phone:</p>
+                <p>+63 123 456 7890</p>
+              </div>
+              <div className="w-full flex gap-2 md:justify-between">
+                <p className="font-normal">Email:</p>
+                <p>example@gmail.com</p>
+              </div>
+              <div className="w-full flex gap-2 md:justify-between">
+                <p className="font-normal">Landline:</p>
+                <p>(02) 8000 1234</p>
+              </div>
+            </div>
+          </div>
+          <div className=" w-full flex  space-x-2 ">
+            <Info sx={{fontSize:'24px'}}/>
+            <div className=" space-x-2   flex flex-col w-full ">
+              <span className={`font-semibold mb-2 text-xl   ${playfair.className}`}>Clinic Hours</span>
+              <p>Mon – Sat, 9:00 AM – 6:00 PM</p>
+            </div>
+          </div>
+          {/* <div className=" w-full flex items-center justify-center md:justify-start  space-x-2 ">
+            <button className={`btn py-5 w-1/2  bg-zinc-900 text-white text-sm  rounded-xl shadow-none ${dmSans.className} hover:bg-zinc-800 hover:text-white`}>Get Directions</button>
+          </div> */}
+        </div>
       </section>
-      <section id="reviews" className="h-fit flex flex-col  p-2 my-8 md:my-80 ">
+      <section id="reviews" className="h-fit flex flex-col  p-2 my-8 md:my-30 ">
         <span className={`text-lg font-normal text-start ${dmSans.className}`}>Our reviews</span>
-        <p className={`text-2xl lg:text-4xl font-bold text-start ${playfair.className} mb-5`}>What our Patients say</p>
+        <p className={`text-5xl font-bold text-start ${playfair.className} mb-5`}>What our Patients say</p>
         <div className="
           flex overflow-x-auto  scrollbar-hide gap-2
           lg:grid lg:grid-cols-3 lg:overflow-visible px-1 py-2 overflow-y-hidden
@@ -148,7 +180,7 @@ export default function Home() {
               <p className="">Dwight Schrute</p>
               <div className="grow"/>
               <div className="min-w-16 rounded-full gap-1 p-2 flex outline">
-                <Google />
+                {/* <Google /> */}
                 <span>Google</span>
               </div>
             </div>
@@ -169,7 +201,7 @@ export default function Home() {
               <p className="">Jim Halpert</p>
               <div className="grow"/>
               <div className="min-w-16 rounded-full gap-1 p-2 flex outline">
-                <Google />
+                {/* <Google /> */}
                 <span>Google</span>
               </div>
             </div>
@@ -190,7 +222,7 @@ export default function Home() {
               <p className="">Pamela Beasley</p>
               <div className="grow"/>
               <div className="min-w-16 rounded-full gap-1 p-2 flex outline">
-                <Google />
+                {/* <Google /> */}
                 <span>Google</span>
               </div>
             </div>
@@ -201,6 +233,47 @@ export default function Home() {
                 <p>
                   Commodo et amet duis eiusmod laborum ut dolor. Et est ipsum aliquip irure exercitation. Laboris dolore dolore culpa voluptate sint id dolor proident. Amet irure ea adipisicing excepteur.
                 </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="faqs" className=" h-fit flex flex-col p-2 my-8 md:my-20 ">
+        <p className={`text-3xl lg:text-5xl font-bold text-center ${playfair.className} `}>Your Frequently Asked Questions</p>
+        <span className={` md:text-lg my-4 text-center mb-8 ${dmSans.className}`}>Book your appointment today and  experience <br /> dental care designed around you.</span>
+        <div className=" flex flex-col justify-center items-center space-y-2 my-8">
+          <div className="collapse collapse-plus  rounded-2xl outline-gray-300 outline w-full md:w-[70%]">
+            <input type="checkbox" />
+            <div className="collapse-title font-semibold">Do I need an appointment before visiting?</div>
+            <div className="collapse-content text-sm">
+              Yes. We recommend booking an appointment in advance to ensure availability and minimize waiting time. Walk-ins may be accommodated depending on the schedule.
+            </div>
+          </div>
+          <div className="collapse collapse-plus  rounded-2xl outline-gray-300 outline w-full md:w-[70%]">
+            <input type="checkbox" />
+            <div className="collapse-title font-semibold">What services does your clinic offer?</div>
+            <div className="collapse-content text-sm">
+              Our clinic provides general dentistry, including check-ups, cleanings, fillings, tooth extractions, and preventive care. Please contact us for a full list of services.
+            </div>
+          </div>
+          <div className="collapse collapse-plus  rounded-2xl outline-gray-300 outline w-full md:w-[70%]">
+            <input type="checkbox" />
+            <div className="collapse-title font-semibold">What are your clinic hours?</div>
+            <div className="collapse-content text-sm">
+              Our clinic is open on scheduled weekdays and selected weekends. Operating hours may vary, so we suggest checking our contact page or calling ahead before your visit.
+            </div>
+          </div>
+          <div className="collapse collapse-plus  rounded-2xl outline-gray-300 outline w-full md:w-[70%]">
+            <input type="checkbox" />
+            <div className="collapse-title font-semibold">Do you accept dental insurance ?</div>
+            <div className="collapse-content text-sm">
+              Yes. We accept selected dental insurance providers and offer flexible payment options. Our staff will be happy to assist you with insurance and billing inquiries.
+            </div>
+          </div>
+          <div className="collapse collapse-plus rounded-2xl outline-gray-300 outline w-full md:w-[70%]">
+            <input type="checkbox" />
+            <div className="collapse-title font-semibold">Is your clinic safe and hygienic?</div>
+            <div className="collapse-content text-sm">
+              Absolutely. We follow strict sterilization and infection-control protocols to ensure a clean, safe, and comfortable environment for every patient.
             </div>
           </div>
         </div>

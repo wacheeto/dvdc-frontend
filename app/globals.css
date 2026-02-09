@@ -2,8 +2,11 @@
 @plugin "daisyui";
 
 html,
-body {
+body,
+#__next {
   margin: 0;
   padding: 0;
-  background-color: white;
+  min-height: 100%;
+  background-color: black;
+  overscroll-behavior: none;
 }
