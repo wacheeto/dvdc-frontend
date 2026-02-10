@@ -1,33 +1,77 @@
-import React from 'react'
+"use client";
+
+import React, { useState } from "react";
+import Link from "next/link";
+import MenuIcon from "@mui/icons-material/Menu";
+import IconButton from "@mui/material/IconButton";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
 
 function Navbar() {
-  return (
-    <div className="navbar bg-black h-18 text-white shadow-lg ">
+    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+    const open = Boolean(anchorEl);
+
+    const handleOpen = (event: React.MouseEvent<HTMLButtonElement>) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
+    return (
+        <div className="navbar bg-black h-18 text-white shadow-lg px-4">
         <div className="flex-1">
-            <a className="btn btn-ghost text-xl">logo</a>
+            <Link href="/" className="btn btn-ghost text-xl text-white">
+            logo
+            </Link>
         </div>
-        <div className='hidden md:flex'>
-            <a className="btn  btn-ghost border-none font-normal">Home</a>
-            <a className="btn bg-transparent btn-ghost border-none font-normal">Services</a>
-            <a className="btn bg-transparent btn-ghost border-none font-normal">About</a>
+        <div className="hidden md:flex gap-2">
+            <Link href="/" className="btn btn-ghost bg-black border-none font-normal text-white">
+            Home
+            </Link>
+            <Link href="/#service" className="btn btn-ghost bg-black border-none font-normal text-white">
+            Services
+            </Link>
+            <Link href="/#location" className="btn btn-ghost bg-black border-none font-normal text-white">
+            About
+            </Link>
         </div>
-        <div className="flex-none md:hidden">
-            <ul className="menu menu-horizontal px-1">
-            <li>
-                <a className="btn bg-transparent btn-ghost border-none font-normal">Link</a></li>
-                <li>
-                    <details>
-                        <summary className="btn bg-transparent btn-ghost border-none font-normal ">Parent</summary>
-                        <ul className=" rounded-t-none p-2 bg-zinc-950 text-white">
-                            <li><a className="btn bg-transparent btn-ghost border-none font-normal" href='#'>Link 1</a></li>
-                            <li><a className="btn bg-transparent btn-ghost border-none font-normal">Link 2</a></li>
-                        </ul>
-                    </details>
-                </li>
-            </ul>
+        <div className="md:hidden">
+            <div className="md:hidden flex justify-end">
+                <IconButton onClick={handleOpen} aria-label="open menu">
+                    <MenuIcon sx={{ color: "white" }} />
+                </IconButton>
+            </div>
+            <Menu
+            anchorEl={anchorEl}
+            open={open}
+            onClose={handleClose}
+            disablePortal 
+            anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+            transformOrigin={{ vertical: "top", horizontal: "right" }}
+            PaperProps={{
+                sx: {
+                backgroundColor: "#09090b",
+                color: "white",
+                minWidth: 160,
+                right:0,
+                },
+            }}
+            >
+            <MenuItem component={Link} href="/" onClick={handleClose}>
+                Home
+            </MenuItem>
+            <MenuItem component={Link} href="/#service" onClick={handleClose}>
+                Services
+            </MenuItem>
+            <MenuItem component={Link} href="/#location" onClick={handleClose}>
+                Locations
+            </MenuItem>
+            </Menu>
         </div>
         </div>
-  )
+    );
 }
 
-export default Navbar
+export default Navbar;

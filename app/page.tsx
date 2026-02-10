@@ -25,11 +25,11 @@ export default function Home() {
         id="hero" className="h-[90vh] bg-white text-black relative flex  ">
         <div className="flex-1 flex flex-col items-center justify-center absolute inset-0 z-50 lg:static lg:z-auto">
           <div className=" flex  flex-col items-center md:items-start">
-            <h1 className={`text-4xl lg:text-6xl lg:text-start font-bold text-center ${playfair.className} `}>Caring for Your Smile, <br /> Every Step of the Way</h1>
-            <p className={` md:text-lg lg:text-start my-4 text-center  ${dmSans.className}`}>Book your appointment today and  experience <br /> dental care designed around you.</p>
+            <h1 className={`text-4xl lg:text-6xl lg:text-start font-bold text-center ${playfair.className} `} data-aos="fade" data-aos-delay="50" data-aos-duration="1000">Caring for Your Smile, <br /> Every Step of the Way</h1>
+            <p className={` md:text-lg lg:text-start my-4 text-center  ${dmSans.className}`} data-aos="fade" data-aos-delay="50" data-aos-duration="1000">Book your appointment today and  experience <br /> dental care designed around you.</p>
             <div className="flex flex-row gap-2">
-              <button className={`btn py-5 w-36  bg-zinc-900 text-white  rounded-full shadow-none ${dmSans.className} hover:bg-zinc-800 hover:text-white`}>Book now!</button>
-              <button className={`btn py-5 w-36  bg-transparent text-black  rounded-full shadow-none ${dmSans.className} hover:bg-zinc-800 hover:text-white`}>Learn more</button>
+              <button className={`btn py-5 w-36  bg-zinc-900 text-white  rounded-full shadow-none ${dmSans.className} hover:bg-zinc-800 hover:text-white`} data-aos="fade" data-aos-delay="50" data-aos-duration="1000">Book now!</button>
+              <button className={`btn py-5 w-36  bg-transparent text-black  rounded-full shadow-none ${dmSans.className} hover:bg-zinc-800 hover:text-white`} data-aos="fade" data-aos-delay="50" data-aos-duration="1000">Learn more</button>
             
             </div>
           </div>
@@ -42,7 +42,7 @@ export default function Home() {
       {/* years of service,
       certifications,
       patients */}
-      <div className="  w-full my-10 grid grid-cols-2 lg:grid-cols-4  h-fit  ">
+      <div className="  w-full my-10 grid grid-cols-2 lg:grid-cols-4  h-fit" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
         <div className="border-s-3 border-gray-300 p-4 flex flex-col  justify-center">
           <h1 className={`text-4xl p-2 lg:text-6xl font-bold text-start ${dmSans.className} `}>20+</h1>
           <span>Years of service</span>
@@ -52,8 +52,8 @@ export default function Home() {
           <span>Patients treated</span>
         </div>
         <div className="border-s-3 border-gray-300 p-4 flex flex-col  justify-center">
-          <h1 className={`text-4xl lg:text-6xl font-bold text-start ${dmSans.className} `}>10k+</h1>
-          <span>Patients treated</span>
+          <h1 className={`text-4xl lg:text-6xl font-bold text-start ${dmSans.className} `}>98%</h1>
+          <span>Patients Satisfaction</span>
         </div>
         <div className="border-s-3 border-gray-300 p-4 flex flex-col  justify-center">
           <h1 className={`text-4xl lg:text-6xl font-bold text-start ${dmSans.className} `}>Modern</h1>
@@ -62,12 +62,13 @@ export default function Home() {
       </div>
       {/* about section */}
       <section
-        className=" bg-white text-black my-8 md:my-35 h-fit flex md:flex-row flex-col w-full gap-2  "
+        className=" bg-white text-black my-8 md:my-36 h-fit flex md:flex-row flex-col w-full gap-2 scroll-mt-32 "
+        id="service"
       >
-        <div className=" flex flex-1 items-center justify-center   ">
+        <div className=" flex flex-1 items-center justify-center" data-aos="fade-right" data-aos-delay="50" data-aos-duration="1000">
           <img src="test" alt="test" className="  w-full h-[350px] md:h-full  outline  " />
         </div>
-        <div className={` p-2 flex flex-1 flex-col ${dmSans.className}`}>
+        <div className={` p-2 flex flex-1 flex-col ${dmSans.className}`} data-aos="fade-left" data-aos-delay="50" data-aos-duration="1000">
           <h1 className={`text-4xl lg:text-6xl lg:text-start font-bold text-center ${playfair.className} `}>High-Quality Dental Services Tailored to Your Needs</h1>
           <p className={` md:text-lg lg:text-start my-4 text-center  ${dmSans.className}`}>Gentle treatments delivered by experienced dental professionals you can trust.</p>
           <div className=" grid grid-cols-2">
@@ -98,7 +99,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="location" className="h-fit flex flex-col p-2 my-8 md:my-30 ">
+      <section id="location" className="h-fit flex flex-col p-2 my-8 md:my-15 scroll-mt-28" data-aos="fade" data-aos-delay="50" data-aos-duration="1000">
         <div className="flex flex-col md:flex-row gap-2  ">
           <div className=" flex-1 flex flex-col my-4 ">
             <span className={`font-regular text-lg ${dmSans.className}`}>
@@ -109,12 +110,12 @@ export default function Home() {
             </span>
           </div>
           <div className=" flex-1  items-center flex">
-            <span className={`font-regular text-lg text-justify  ${dmSans.className}`}>
+            <span className={`font-regular ${dmSans.className}`}>
               Id est consectetur nostrud ipsum dolor Lorem et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ea praesentium, dolorem neque aliquam ipsa, aspernatur nostrum repellendus.
             </span>
           </div>
         </div>
-        <div className="relative  w-screen h-[250px] md:h-[450px]  self-center my-4 ">
+        <div className="relative  w-full h-[250px] md:h-[450px] self-center my-4 ">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.8932204432267!2d-88.80049402406999!3d41.35467459802385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880955000e076dd7%3A0x8b32e8618294c8e7!2sVolvo%20Island!5e0!3m2!1sen!2sph!4v1770653323577!5m2!1sen!2sph"
             width="100%"
@@ -128,8 +129,8 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
           <div className=" w-full flex space-x-2 ">
             <PinDrop sx={{fontSize:'24px'}}/>
-            <div className=" space-x-2 text-lg  flex flex-col w-full ">
-              <span className={`font-semibold mb-2 text-xl   ${playfair.className}`}>Address</span>
+            <div className={`space-x-2 text-sm flex flex-col w-full ${dmSans.className}`}>
+              <span className={`font-semibold mb-2 text-lg   ${playfair.className}`}>Address</span>
               <p className="font-normal">88 Happy Lane, Barangka Drive</p>
               <p>Marikina City, Metro Manila</p>
               <p>Philippines</p>
@@ -137,8 +138,8 @@ export default function Home() {
           </div>
           <div className=" w-full flex  space-x-2 ">
             <Phone sx={{fontSize:'24px'}}/>
-            <div className=" space-x-2   flex flex-col w-full ">
-              <span className={`font-semibold mb-2 text-xl   ${playfair.className}`}>Contact Information</span>
+            <div className={`space-x-2 text-sm flex flex-col w-full ${dmSans.className}`}>
+              <span className={`font-semibold mb-2 text-lg   ${playfair.className}`}>Contact Information</span>
               <div className="w-full flex gap-2 md:justify-between">
                 <p className="font-normal">Phone:</p>
                 <p>+63 123 456 7890</p>
@@ -155,8 +156,8 @@ export default function Home() {
           </div>
           <div className=" w-full flex  space-x-2 ">
             <Info sx={{fontSize:'24px'}}/>
-            <div className=" space-x-2   flex flex-col w-full ">
-              <span className={`font-semibold mb-2 text-xl   ${playfair.className}`}>Clinic Hours</span>
+            <div className={`space-x-2 text-sm flex flex-col w-full ${dmSans.className}`}>
+              <span className={`font-semibold mb-2 text-xl  ${playfair.className}`}>Clinic Hours</span>
               <p>Mon – Sat, 9:00 AM – 6:00 PM</p>
             </div>
           </div>
@@ -165,21 +166,21 @@ export default function Home() {
           </div> */}
         </div>
       </section>
-      <section id="reviews" className="h-fit flex flex-col  p-2 my-8 md:my-30 ">
+      <section id="reviews" className="h-fit flex flex-col  p-2 my-8 " data-aos="fade" data-aos-delay="50" data-aos-duration="1000">
         <span className={`text-lg font-normal text-start ${dmSans.className}`}>Our reviews</span>
         <p className={`text-5xl font-bold text-start ${playfair.className} mb-5`}>What our Patients say</p>
         <div className="
           flex overflow-x-auto  scrollbar-hide gap-2
           lg:grid lg:grid-cols-3 lg:overflow-visible px-1 py-2 overflow-y-hidden
         ">
-          <div className="shadow-lg p-2 rounded-2xl h-[350px] min-w-[80vw] md:min-w-[40vh] snap-start flex flex-col lg:min-w-0">
+          <div className="shadow-lg p-2 rounded-2xl h-[350px] min-w-[90vw] md:min-w-[40vh] snap-start flex flex-col lg:min-w-0">
             <div className=" p-2 h-fit items-center flex gap-2">
               <div className=" w-10 h-10 rounded-full overflow-hidden  ">
                 <img src="as" alt="alt" className="object-contain bg-yellow-200 img-full h-full w-full" />
               </div>
               <p className="">Dwight Schrute</p>
               <div className="grow"/>
-              <div className="min-w-16 rounded-full gap-1 p-2 flex outline">
+              <div className="min-w-16 rounded-full gap-1 p-2 flex outline bg-zinc-900 text-white">
                 {/* <Google /> */}
                 <span>Google</span>
               </div>
@@ -200,7 +201,7 @@ export default function Home() {
               </div>
               <p className="">Jim Halpert</p>
               <div className="grow"/>
-              <div className="min-w-16 rounded-full gap-1 p-2 flex outline">
+              <div className="min-w-16 rounded-full gap-1 p-2 flex outline bg-zinc-900 text-white">
                 {/* <Google /> */}
                 <span>Google</span>
               </div>
@@ -221,7 +222,7 @@ export default function Home() {
               </div>
               <p className="">Pamela Beasley</p>
               <div className="grow"/>
-              <div className="min-w-16 rounded-full gap-1 p-2 flex outline">
+              <div className="min-w-16 rounded-full gap-1 p-2 flex outline bg-zinc-900 text-white">
                 {/* <Google /> */}
                 <span>Google</span>
               </div>
@@ -237,10 +238,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="faqs" className=" h-fit flex flex-col p-2 my-8 md:my-20 ">
+      <section id="faqs" className=" h-fit flex flex-col p-2 my-8 md:my-20 " data-aos="fade" data-aos-delay="50" data-aos-duration="1000">
         <p className={`text-3xl lg:text-5xl font-bold text-center ${playfair.className} `}>Your Frequently Asked Questions</p>
         <span className={` md:text-lg my-4 text-center mb-8 ${dmSans.className}`}>Book your appointment today and  experience <br /> dental care designed around you.</span>
-        <div className=" flex flex-col justify-center items-center space-y-2 my-8">
+        <div className=" flex flex-col justify-center items-center space-y-2 my-8 text-sm">
           <div className="collapse collapse-plus  rounded-2xl outline-gray-300 outline w-full md:w-[70%]">
             <input type="checkbox" />
             <div className="collapse-title font-semibold">Do I need an appointment before visiting?</div>

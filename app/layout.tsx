@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { DM_Sans, Playfair_Display } from "next/font/google";
+import AOSProvider from './components/AOSProvider';
 
 export const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -28,9 +29,11 @@ export default function RootLayout({
         <div className="w-full sticky top-0 z-100">
           <Navbar />
         </div>
-        <main className="flex-1 container  bg-white">
-          {children}
-        </main>
+        <AOSProvider>
+          <main className="flex-1 container  bg-white">
+            {children}
+          </main>
+        </AOSProvider>
         <Footer/>
       </body>
     </html>
