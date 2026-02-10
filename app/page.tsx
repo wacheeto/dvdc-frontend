@@ -241,7 +241,7 @@ export default function Home() {
       <section id="faqs" className=" h-fit flex flex-col p-2 my-8 md:my-20 " data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
         <p className={`text-3xl lg:text-5xl font-bold text-center ${playfair.className} `}>Your Frequently Asked Questions</p>
         <span className={` md:text-lg my-4 text-center mb-8 ${dmSans.className}`}>Book your appointment today and  experience <br /> dental care designed around you.</span>
-        <div className=" flex flex-col justify-center items-center space-y-2 my-8 text-xs md:text-m">
+        <div className=" flex flex-col justify-center items-center space-y-2 my-8 text-xs md:text-sm">
           <div className="collapse collapse-plus  rounded-2xl outline-gray-300 outline w-full md:w-[70%]">
             <input type="checkbox" />
             <div className="collapse-title font-semibold">Do I need an appointment before visiting?</div>
