@@ -65,10 +65,10 @@ export default function Home() {
         className=" bg-white text-black my-8 md:my-36 h-fit flex md:flex-row flex-col w-full gap-2 scroll-mt-32 "
         id="service"
       >
-        <div className=" flex flex-1 items-center justify-center" data-aos="fade-right" data-aos-delay="50" data-aos-duration="1000">
+        <div className=" flex flex-1 items-center justify-center" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
           <img src="test" alt="test" className="  w-full h-[350px] md:h-full  outline  " />
         </div>
-        <div className={` p-2 flex flex-1 flex-col ${dmSans.className}`} data-aos="fade-left" data-aos-delay="50" data-aos-duration="1000">
+        <div className={` p-2 flex flex-1 flex-col ${dmSans.className}`} data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
           <h1 className={`text-4xl lg:text-6xl lg:text-start font-bold text-center ${playfair.className} `}>High-Quality Dental Services Tailored to Your Needs</h1>
           <p className={` md:text-lg lg:text-start my-4 text-center  ${dmSans.className}`}>Gentle treatments delivered by experienced dental professionals you can trust.</p>
           <div className=" grid grid-cols-2">
@@ -99,7 +99,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="location" className="h-fit flex flex-col p-2 my-8 md:my-15 scroll-mt-28" data-aos="fade" data-aos-delay="50" data-aos-duration="1000">
+      <section id="location" className="h-fit flex flex-col p-2 my-8 md:my-15 scroll-mt-28" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
         <div className="flex flex-col md:flex-row gap-2  ">
           <div className=" flex-1 flex flex-col my-4 ">
             <span className={`font-regular text-lg ${dmSans.className}`}>
@@ -166,7 +166,7 @@ export default function Home() {
           </div> */}
         </div>
       </section>
-      <section id="reviews" className="h-fit flex flex-col  p-2 my-8 " data-aos="fade" data-aos-delay="50" data-aos-duration="1000">
+      <section id="reviews" className="h-fit flex flex-col  p-2 my-8 " data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
         <span className={`text-lg font-normal text-start ${dmSans.className}`}>Our reviews</span>
         <p className={`text-5xl font-bold text-start ${playfair.className} mb-5`}>What our Patients say</p>
         <div className="
@@ -238,7 +238,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="faqs" className=" h-fit flex flex-col p-2 my-8 md:my-20 " data-aos="fade" data-aos-delay="50" data-aos-duration="1000">
+      <section id="faqs" className=" h-fit flex flex-col p-2 my-8 md:my-20 " data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
         <p className={`text-3xl lg:text-5xl font-bold text-center ${playfair.className} `}>Your Frequently Asked Questions</p>
         <span className={` md:text-lg my-4 text-center mb-8 ${dmSans.className}`}>Book your appointment today and  experience <br /> dental care designed around you.</span>
         <div className=" flex flex-col justify-center items-center space-y-2 my-8 text-sm">

@@ -22,7 +22,7 @@ function Navbar() {
     return (
         <div className="navbar bg-black h-18 text-white shadow-lg px-4">
         <div className="flex-1">
-            <Link href="/" className="btn btn-ghost text-xl text-white">
+            <Link href="/#" className="btn btn-ghost text-xl text-white">
             logo
             </Link>
         </div>
@@ -59,7 +59,7 @@ function Navbar() {
                 },
             }}
             >
-            <MenuItem component={Link} href="/" onClick={handleClose}>
+            <MenuItem component={Link} href="/#" onClick={handleClose}>
                 Home
             </MenuItem>
             <MenuItem component={Link} href="/#service" onClick={handleClose}>
