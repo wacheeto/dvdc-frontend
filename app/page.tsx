@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ArrowRight,Droplets,Leaf,Quote,Shield,ShieldCheck, Star, Stethoscope, Users, Wifi } from "lucide-react";
 import { Google, Info, Phone, PinDrop } from "@mui/icons-material";
 import maps from './assets/maps.webp';
+import hero from './assets/hero.webp';
 
 export const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -24,20 +25,19 @@ export default function Home() {
       <section
         id="hero" className="h-[90vh] bg-white text-black relative flex  ">
         <div className="flex-1 flex flex-col items-center justify-center absolute inset-0 z-50 lg:static lg:z-auto">
-          <div className=" flex  flex-col items-center md:items-start">
+          <div className=" flex  flex-col items-center">
             <h1 className={`text-4xl lg:text-6xl lg:text-start font-bold text-center ${playfair.className} `} data-aos="fade" data-aos-delay="50" data-aos-duration="1000">Caring for Your Smile, <br /> Every Step of the Way</h1>
-            <p className={` md:text-lg lg:text-start my-4 text-center  ${dmSans.className}`} data-aos="fade" data-aos-delay="50" data-aos-duration="1000">Book your appointment today and  experience <br /> dental care designed around you.</p>
+            <p className={` md:text-lg my-4 text-center  ${dmSans.className}`} data-aos="fade" data-aos-delay="50" data-aos-duration="1000">Book your appointment today and  experience <br /> dental care designed around you.</p>
             <div className="flex flex-row gap-2">
               <button className={`btn py-5 w-36  bg-zinc-900 text-white  rounded-full shadow-none ${dmSans.className} hover:bg-zinc-800 hover:text-white`} data-aos="fade" data-aos-delay="50" data-aos-duration="1000">Book now!</button>
               <button className={`btn py-5 w-36  bg-transparent text-black  rounded-full shadow-none ${dmSans.className} hover:bg-zinc-800 hover:text-white`} data-aos="fade" data-aos-delay="50" data-aos-duration="1000">Learn more</button>
-            
             </div>
           </div>
         </div>
-        <div
+        {/* <div
           className="flex-1 flex items-center justify-center absolute inset-0 md:static  text-gray-400 " data-aos="fade" data-aos-delay="50" data-aos-duration="1000">
-            <img src="test" alt="test" className="outline h-screen md:h-[60vh] bg-red-200  w-full" />
-        </div>
+            <Image src={hero} alt="test" className="outline h-screen md:h-[60vh]  w-full object-cover" />
+        </div> */}
       </section>
       {/* years of service,
       certifications,
@@ -241,7 +241,7 @@ export default function Home() {
       <section id="faqs" className=" h-fit flex flex-col p-2 my-8 md:my-20 " data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
         <p className={`text-3xl lg:text-5xl font-bold text-center ${playfair.className} `}>Your Frequently Asked Questions</p>
         <span className={` md:text-lg my-4 text-center mb-8 ${dmSans.className}`}>Book your appointment today and  experience <br /> dental care designed around you.</span>
-        <div className=" flex flex-col justify-center items-center space-y-2 my-8 text-sm">
+        <div className=" flex flex-col justify-center items-center space-y-2 my-8 text-xs md:text-m">
           <div className="collapse collapse-plus  rounded-2xl outline-gray-300 outline w-full md:w-[70%]">
             <input type="checkbox" />
             <div className="collapse-title font-semibold">Do I need an appointment before visiting?</div>
