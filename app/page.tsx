@@ -35,7 +35,7 @@ export default function Home() {
           </div>
         </div>
         <div
-          className="flex-1 flex items-center justify-center absolute inset-0 md:static  text-gray-400 ">
+          className="flex-1 flex items-center justify-center absolute inset-0 md:static  text-gray-400 " data-aos="fade" data-aos-delay="50" data-aos-duration="1000">
             <img src="test" alt="test" className="outline h-screen md:h-[60vh] bg-red-200  w-full" />
         </div>
       </section>
